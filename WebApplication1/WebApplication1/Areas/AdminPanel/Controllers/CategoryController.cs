@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Areas.AdminPanel.Controllers
 {
+    [Area("AdminPanel")]
     public class CategoryController : Controller
     {
         public IActionResult Index()
