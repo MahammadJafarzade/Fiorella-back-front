@@ -23,6 +23,11 @@ namespace WebApplication1.Areas.AdminPanel.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Create(string Name)
+        {
+            return View();
+        }
     }
 
 }
