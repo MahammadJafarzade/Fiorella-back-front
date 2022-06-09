@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.DAL;
+using WebApplication1.Models;
+using WebApplication1.ViewModels.Categories;
 
 namespace WebApplication1.Areas.AdminPanel.Controllers
 {
@@ -24,9 +26,16 @@ namespace WebApplication1.Areas.AdminPanel.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(string Name)
+        public async Task<IActionResult> Create(CategoryCreateVM category)
         {
-            return View();
+            if (!ModelState.IsValid) return View();
+            Category newCategory = new Category
+            {
+                Name = category.Name
+            };
+            await _context.Categories.AddAsync(newCategory);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 
