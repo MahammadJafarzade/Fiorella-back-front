@@ -8,7 +8,7 @@ namespace WebApplication1.ViewModels.Categories
 {
     public class CategoryCreateVM
     {
-        [Required]
+        [Required(ErrorMessage ="Must filled!")]
         public  string Name { get; set; }
     }
 }
