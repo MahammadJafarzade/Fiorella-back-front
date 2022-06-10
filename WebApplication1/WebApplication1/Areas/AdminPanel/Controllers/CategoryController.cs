@@ -73,9 +73,9 @@ namespace WebApplication1.Areas.AdminPanel.Controllers
             Category categoryDb = _context.Categories.Where(c => !c.IsDeleted).FirstOrDefault(c => c.Id == id);
             if (categoryDb == null)
                 return NotFound(category);
-            if (category.Name.ToLower() == categoryDb.Name.ToLower())
-                return RedirectToAction(nameof(Index));
-            bool IsExist = categories.Where(c => !c.IsDeleted).Any(c => c.Name.ToLower() == category.Name.ToLower());
+            //if (category.Name.ToLower() == categoryDb.Name.ToLower())
+            //    return RedirectToAction(nameof(Index));
+            bool IsExist = categories.Where(c => !c.IsDeleted).Any(c => c.Name.ToLower() == category.Name.ToLower() && c.Id != categoryDb.Id);
             if (IsExist)
             {
                 ModelState.AddModelError("Name", $"{category.Name} is exist");
