@@ -154,3 +154,4 @@ C:\Users\Orkhan\OneDrive\Desktop\FiorellaF_B\WebApplication1\WebApplication1\obj
 C:\Users\Orkhan\OneDrive\Desktop\FiorellaF_B\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Category\Create.cshtml.g.cs
 C:\Users\Orkhan\OneDrive\Desktop\FiorellaF_B\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Category\Update.cshtml.g.cs
 C:\Users\Orkhan\OneDrive\Desktop\FiorellaF_B\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Slider\Index.cshtml.g.cs
+C:\Users\Orkhan\OneDrive\Desktop\FiorellaF_B\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Slider\Create.cshtml.g.cs
