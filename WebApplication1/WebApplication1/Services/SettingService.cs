@@ -15,7 +15,7 @@ namespace WebApplication1.Settings
         }
         public Dictionary<string, string> GetAllSettings()
         {
-            return _context.Settings.ToDictionary(s => s.Key, s => s.Value);
+            return _context.Settings.ToDictionary(s =>s.Key, s =>s.Value);
         }
     }
 }

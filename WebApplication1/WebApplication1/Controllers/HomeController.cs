@@ -18,8 +18,8 @@ namespace WebApplication1.Controllers
         }
         public IActionResult Index()
         {
-            HttpContext.Session.SetString("name","Maqa");
-            HttpContext.Response.Cookies.Append("surname", "Ceferzade");
+           // HttpContext.Session.SetString("name","Maqa");
+            //HttpContext.Response.Cookies.Append("surname", "Ceferzade");
             HomeViewModel home = new HomeViewModel
             {
                 Slides = _context.Slides.ToList(),
@@ -30,7 +30,7 @@ namespace WebApplication1.Controllers
             return View(home);
         }
 
-        public IActionResult LoadProducts()
+        public IActionResult LoadProduct()
         {
             List<Product> products = _context.Products.Where(c => !c.IsDeleted).Include(p => p.Images).Include(p => p.Category).Skip(8).Take(8).ToList();
             //return Json(products);
