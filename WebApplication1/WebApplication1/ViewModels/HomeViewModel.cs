@@ -12,5 +12,6 @@ namespace WebApplication1.ViewModels
         public List<Category> Categories { get; set; }
         public List<Product> Products { get; set; }
         public SliderSummary SliderSummary { get; set; }
+        public Setting Setting { get; set; }
     }
 }

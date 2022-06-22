@@ -9,6 +9,6 @@ namespace WebApplication1.ViewModels.Categories
     public class CategoryCreateVM
     {
         [Required(ErrorMessage ="Must filled!")]
-        public  string Name { get; set; }
+        public string Name { get; set; }
     }
 }

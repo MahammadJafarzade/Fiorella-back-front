@@ -15,7 +15,7 @@ namespace WebApplication1.ViewComponents
         {
             _context = context;
         }
-        public  async Task<IViewComponentResult> InvokeAsync()
+        public async Task<IViewComponentResult> InvokeAsync()
         {
             var model= await _context.Settings.ToDictionaryAsync(s => s.Key, s => s.Value);
             return View(model);

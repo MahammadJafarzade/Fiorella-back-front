@@ -13,9 +13,9 @@ namespace WebApplication1.Settings
         {
             _context = context;
         }
-        public Dictionary<string, string> GetAllSettings()
+        public Dictionary<string,string>GetAllSettings()
         {
-            return _context.Settings.ToDictionary(s =>s.Key, s =>s.Value);
+            return _context.Settings.ToDictionary(s =>s.Key,s =>s.Value);
         }
     }
 }

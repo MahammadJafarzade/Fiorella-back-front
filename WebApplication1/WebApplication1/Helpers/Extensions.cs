@@ -22,8 +22,7 @@ namespace WebApplication1.Helpers
             var filename = Guid.NewGuid().ToString() + file.FileName;
 
             var resultPath = Path.Combine(Helper.GetPath(root, folders), filename);
-            using (FileStream fileStream =
-                new FileStream(resultPath, FileMode.Create))
+            using (FileStream fileStream =new FileStream(resultPath, FileMode.Create))
             {
                await file.CopyToAsync(fileStream);
             }

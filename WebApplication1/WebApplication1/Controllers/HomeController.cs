@@ -34,7 +34,7 @@ namespace WebApplication1.Controllers
         {
             List<Product> products = _context.Products.Where(c => !c.IsDeleted).Include(p => p.Images).Include(p => p.Category).Skip(8).Take(8).ToList();
             //return Json(products);
-            return PartialView("", products);
+            return PartialView(" ", products);
         }
         public IActionResult GetSession()
         {
