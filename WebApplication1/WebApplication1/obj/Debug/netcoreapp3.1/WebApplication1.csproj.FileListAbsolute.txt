@@ -485,3 +485,5 @@ C:\Users\Orkhan\OneDrive\Desktop\FiorelloB_F\WebApplication1\WebApplication1\bin
 C:\Users\Orkhan\OneDrive\Desktop\FiorelloB_F\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Orkhan\OneDrive\Desktop\FiorelloB_F\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Orkhan\OneDrive\Desktop\FiorelloB_F\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Orkhan\OneDrive\Desktop\FiorelloB_F\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationPartial.cshtml.g.cs
+C:\Users\Orkhan\OneDrive\Desktop\FiorelloB_F\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Account\SignIn.cshtml.g.cs

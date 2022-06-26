@@ -1,5 +1,9 @@
 ﻿@using WebApplication1.ViewModels.Account
-@model RegisterVM
+@model SignInVM
+@{
+   // Layout = null;
+}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,38 +32,32 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                             <div class="brand-logo">
-                                <imgsrc="~/admin/images/logo.svg" alt="logo">
+                                <imgsrc ="~/admin/images/logo.svg" alt="logo">
                             </div>
                             <h4>New here?</h4>
-                            <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
+                            <h6 class="font-weight-light">Sign in here</h6>
                             <div class="text-danger" asp-validation-summary="ModelOnly"></div>
                             <form class="pt-3" method="post">
-                                <div class="form-group">
-                                    <input asp-for="FullName" class="form-control form-control-lg" placeholder="FullName">
-                                    <span class="text-danger" asp-validation-for="FullName"></span>
-                                </div>
+
                                 <div class="form-group">
                                     <input asp-for="Email" class="form-control form-control-lg" placeholder="Email">
                                     <span class="text-danger"
                                           asp-validation-for="Email"></span>
                                 </div>
-                                <div class="form-group">
-                                    <input asp-for="Username" class="form-control form-control-lg" placeholder="Username">
-                                    <span class="text-danger" asp-validation-for="Username"></span>
-                                </div>
+
                                 <div class="form-group">
                                     <input asp-for="Password" class="form-control form-control-lg" placeholder="Password">
                                     <span class="text-danger" asp-validation-for="Password"></span>
                                 </div>
                                 <div class="form-group">
-                                    <input asp-for="CheckPassword" class="form-control form-control-lg" placeholder="Repeatpassword">
-                                    <span class="text-danger" asp-validation-for="CheckPassword"></span>
+                                   Remember me: <input asp-for="IsPersistent" >
                                 </div>
+
                                 <div class="mt-3">
-                                    <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN UP</button>
+                                    <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN IN</button>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
-                                    Already have an account? <a asp-action="SignIn" class="text-primary">Login</a>
+                                   Create new one: <a asp-action="Register" class="text-primary">Register</a>
                                 </div>
                             </form>
                         </div>
@@ -72,15 +70,18 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
-    <scriptsrc="~/admin/svendors/base/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- inject:js -->
-    <scriptsrc="~/admin/js/off-canvas.js"></script>
-    <scriptsrc="~/admin/js/hoverable-collapse.js"></script>
-    <partial name="_ValidationPartial"/>
-    <scriptsrc="~/admin/js/template.js"></script>
-    <!-- endinject -->
+    <scriptsrc ="~/admin/svendors/base/vendor.bundle.base.js">
+        </script>
+        <!-- endinject -->
+        <!-- inject:js -->
+        <scriptsrc ="~/admin/js/off-canvas.js">
+            </script>
+            <scriptsrc ="~/admin/js/hoverable-collapse.js">
+                </script>
+                <partial name="_ValidationPartial" />
+                <scriptsrc ="~/admin/js/template.js">
+                    </script>
+                    <!-- endinject -->
 </body>
 
 </html>
-
