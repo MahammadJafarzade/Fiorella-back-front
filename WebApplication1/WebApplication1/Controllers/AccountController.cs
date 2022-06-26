@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication1.Helpers;
 using WebApplication1.Models;
 using WebApplication1.ViewModels.Account;
 
@@ -13,12 +14,14 @@ namespace WebApplication1.Controllers
     {
         private UserManager<AppUser> _userManager { get; }
         private SignInManager<AppUser> _signInManager { get; }
+        private RoleManager<IdentityRole> _roleManager { get; }
 
         public AccountController(UserManager<AppUser> userManager,
-            SignInManager<AppUser> signInManager)
+            SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
         public IActionResult Register()
         {
@@ -47,6 +50,7 @@ namespace WebApplication1.Controllers
                 }
                 return View(user);
             }
+            await _userManager.AddToRoleAsync(newUser, Role.RoleType.Member.ToString());
             await _signInManager.SignInAsync(newUser, true);
             return RedirectToAction("Index","Home");
         }
@@ -90,5 +94,17 @@ namespace WebApplication1.Controllers
             return RedirectToAction("Index", "Home");
 
         }
+        //public async Task CreateRole()
+        //{
+        //    foreach (var role in Enum.GetValues(typeof(Role.RoleType)))
+        //    {
+        //        if (!await _roleManager.RoleExistsAsync(role.ToString()))
+        //        {
+        //            await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+        //        }
+
+        //    }
+        //}
+
     }
 }

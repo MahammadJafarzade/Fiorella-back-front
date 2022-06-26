@@ -48,6 +48,10 @@ namespace WebApplication1
                 options.Lockout.MaxFailedAccessAttempts = 3;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
             });
+
+            services.ConfigureApplicationCookie(options =>
+            options.LoginPath="/Account/SignIn");
+
                 services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(_config["ConnectionStrings:Default"]);

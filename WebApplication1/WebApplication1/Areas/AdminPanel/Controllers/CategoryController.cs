@@ -1,15 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.DAL;
+using WebApplication1.Helpers;
 using WebApplication1.Models;
 using WebApplication1.ViewModels.Categories;
 
 namespace WebApplication1.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
+    [Authorize(Roles = nameof(Role.RoleType.Admin))]
     public class CategoryController : Controller
     {
         private AppDbContext _context { get; }
